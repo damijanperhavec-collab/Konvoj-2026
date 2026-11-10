@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prednovoletni vikend · Primorski Konvoj 2026</title>
+<meta name="description" content="Vabilo in prijava na prednovoletni vikend Primorskega Konvoja, 27.–29. 11. 2026, Vreme, Škocjanske jame, Elerje.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --night:#232323; --night2:#2b2b2b; --gold:#d40f0f; --gold-soft:#fbe0e0;
+    --paper:#ffffff; --ink:#1d2433; --muted:#5b6475; --line:#e4ddd0; --red:#b8402f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3{font-family:"Permanent Marker",cursive;font-weight:400;line-height:1.2;margin:0 0 .5em}
+  a{color:var(--night2)}
+  .wrap{max-width:860px;margin:0 auto;padding:0 20px}
+
+  /* HERO */
+  .hero{background:radial-gradient(ellipse at 70% 0%, #3a3a3a 0%, #1a1a1a 65%);color:#fff;position:relative;overflow:hidden;padding:56px 0 64px}
+  .hero::before{content:"";position:absolute;inset:0;background-image:
+      radial-gradient(1.5px 1.5px at 12% 20%,#fff9 50%,transparent 51%),
+      radial-gradient(1px 1px at 30% 60%,#fff8 50%,transparent 51%),
+      radial-gradient(1.5px 1.5px at 55% 15%,#fffa 50%,transparent 51%),
+      radial-gradient(1px 1px at 80% 45%,#fff7 50%,transparent 51%),
+      radial-gradient(2px 2px at 90% 12%,#fff 50%,transparent 51%),
+      radial-gradient(1px 1px at 45% 80%,#fff6 50%,transparent 51%),
+      radial-gradient(1.5px 1.5px at 68% 70%,#fff8 50%,transparent 51%);}
+  .hero .wrap{position:relative}
+  .eyebrow{display:inline-block;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;font-weight:600;color:#fff;background:var(--gold);padding:3px 10px;border-radius:4px;margin-bottom:14px}
+  .banner{display:block;width:100%;max-width:860px;margin:0 auto;height:auto}
+  .bannerwrap{background:#fff;padding:12px 0 0}
+  .hero h1{font-size:clamp(2.1rem,5.5vw,3.4rem);font-weight:700}
+  .hero h1 span{color:#ff4a3d}
+  .hero p.lead{font-size:1.15rem;max-width:600px;color:#e6e6e6;margin:0 0 28px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+  .chip{background:#ffffff14;border:1px solid #ffffff2e;border-radius:999px;padding:6px 14px;font-size:.92rem}
+  .btn{display:inline-block;background:var(--gold);color:#fff;font-weight:600;padding:13px 26px;border-radius:10px;text-decoration:none;border:0;font-size:1rem;cursor:pointer;font-family:inherit}
+  .btn:hover{background:#a90b0b}
+  .road{position:absolute;bottom:0;left:0;right:0;height:46px;opacity:.9}
+
+  section{padding:56px 0}
+  section h2{font-size:2.2rem;margin-bottom:24px}
+
+  /* PROGRAM */
+  .day{margin-bottom:34px}
+  .day h3{font-size:1.45rem;color:var(--night2);display:flex;align-items:baseline;gap:10px;border-bottom:2px solid var(--gold);padding-bottom:6px}
+  .day h3 small{font-family:Inter,sans-serif;font-size:.9rem;color:var(--muted);font-weight:500}
+  .item{display:grid;grid-template-columns:70px 1fr;gap:14px;padding:12px 0;border-bottom:1px dashed var(--line)}
+  .item:last-child{border-bottom:0}
+  .time{font-weight:600;color:var(--night2);font-variant-numeric:tabular-nums}
+  .item b{display:block}
+  .item p{margin:2px 0 0;color:var(--muted);font-size:.96rem}
+  .tag{display:inline-block;font-size:.78rem;background:var(--gold-soft);color:#a90b0b;border-radius:6px;padding:1px 8px;margin-left:6px;font-weight:600;vertical-align:middle}
+  .todo{background:#fff3cd;border:1px dashed #d9a400;color:#7a5a00;border-radius:6px;padding:1px 6px;font-size:.9rem}
+
+  .note{background:#fafafa;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:16px 18px;margin:18px 0}
+  .note ul{margin:6px 0 0;padding-left:20px}
+
+  /* PRICES */
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line)}
+  th{background:#f4f4f4;font-size:.9rem;color:var(--muted);font-weight:600}
+  td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  tr:last-child td{border-bottom:0}
+
+  /* FORM */
+  .formbox{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:0 10px 30px #13213a0f}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .full{grid-column:1/-1}
+  label{display:block;font-weight:500;font-size:.95rem;margin-bottom:5px}
+  label .req{color:var(--red)}
+  input[type=text],input[type=email],input[type=tel],input[type=number],textarea,select{
+    width:100%;padding:11px 12px;border:1px solid #cfc7b8;border-radius:8px;font:inherit;background:#fffdf9}
+  input:focus,textarea:focus,select:focus{outline:2px solid var(--gold);border-color:var(--gold)}
+  .checks{display:grid;gap:8px}
+  .checks label{display:flex;gap:10px;align-items:flex-start;font-weight:400;cursor:pointer;margin:0}
+  .checks input{margin-top:5px;width:18px;height:18px;accent-color:var(--gold)}
+  fieldset{border:0;padding:0;margin:0}
+  legend{font-weight:600;margin-bottom:8px;font-size:.95rem}
+  .help{font-size:.85rem;color:var(--muted);margin-top:4px}
+  .total{display:flex;justify-content:space-between;align-items:center;background:var(--night);color:#fff;border-radius:12px;padding:16px 20px;margin:22px 0}
+  .total strong{font-size:1.6rem;color:#ff5a4f;font-family:"Permanent Marker",cursive}
+  .total small{display:block;color:#cfcfcf;font-size:.82rem}
+  .msg{display:none;border-radius:10px;padding:16px;margin-top:16px}
+  .msg.ok{display:block;background:#e6f4ea;border:1px solid #9fd3ad;color:#1e5b31}
+  .msg.err{display:block;background:#fdecea;border:1px solid #f1b0a7;color:#8a2417}
+  .hp{position:absolute;left:-9999px}
+
+  footer{background:var(--night);color:#d6d6d6;text-align:center;padding:30px 0;font-size:.9rem}
+  @media (max-width:640px){.grid{grid-template-columns:1fr}.item{grid-template-columns:58px 1fr}.formbox{padding:20px}}
+</style>
+</head>
+<body>
+
+<div class="bannerwrap"><img class="banner" src="baner.jpg" alt="Primorski Konvoj – Vstala Primorska si v novo življenje"></div>
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Primorski Konvoj · vabilo</div>
+    <h1>Prednovoletni vikend<br><span>s prednovoletno fešto</span></h1>
+    <p class="lead">Dragi kamperji in prijatelji Konvoja! Vabimo vas na naše tradicionalno prednovoletno druženje: komedija, fešta, Škocjanske jame in dobra družba.</p>
+    <div class="chips">
+      <span class="chip">📅 pet 27. – ned 29. 11. 2026</span>
+      <span class="chip">📍 Vreme / Famlje · Škocjanske jame · Škofije</span>
+      <span class="chip">⏰ prijave do 20. 11.</span>
+    </div>
+    <a class="btn" href="#prijava">Prijavi se ↓</a>
+  </div>
+  <svg class="road" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 30 Q 200 10 400 26 T 800 22 T 1200 18 V46 H0Z" fill="#ffffff"/>
+  </svg>
+</header>
+
+<main>
+<section>
+  <div class="wrap">
+    <h2>Program</h2>
+
+    <div class="day">
+      <h3>Petek <small>27. 11. 2026 · Vreme / Famlje</small></h3>
+      <div class="item"><div class="time">18:00</div><div><b>Zbor pred kulturnim domom v Vremah / Famljah</b><p>Malo se podružimo, blagajnik pobere prispevke. <a href="https://maps.app.goo.gl/WoZwZNm2w1ePDWLL7" target="_blank" rel="noopener">Lokacija na zemljevidu</a></p></div></div>
+      <div class="item"><div class="time">19:00</div><div><b>Komedija v kulturnem domu</b> <span class="tag">10 €</span></div></div>
+      <div class="item"><div class="time">po predstavi</div><div><b>Prednovoletna fešta</b> <span class="tag">10 €</span><p>V prostorih krajevne skupnosti v sosednji stavbi. Pijačo in kaj za pojest prinesemo sami, vsak nekaj. Po fešti za sabo skupaj pospravimo.</p></div></div>
+      <div class="item"><div class="time">noč</div><div><b>Prenočevanje v avtodomih pred kulturnim domom</b></div></div>
+    </div>
+
+    <div class="day">
+      <h3>Sobota <small>28. 11. 2026 · Škocjanske jame · Škofije</small></h3>
+      <div class="item"><div class="time">jutro</div><div><b>Zajtrk in prosto dopoldne</b><p>Kdor želi, gre po svoje kolesarit ali na pohod (npr. po stopnicah do železniške postaje v Vremah).</p></div></div>
+      <div class="item"><div class="time">pred 13:00</div><div><b>Premik na parkirišče Škocjanskih jam</b></div></div>
+      <div class="item"><div class="time">13:00</div><div><b>Ogled Škocjanskih jam</b> <span class="tag">16 € / 12 €</span><p>Rezerviran skupinski ogled, približno 1,5 do 2 uri.</p></div></div>
+      <div class="item"><div class="time">po ogledu</div><div><b>Skupna večerja v Gostilni Hrvatin</b><p>Jelarji 34, 6281 Škofije · <a href="https://maps.app.goo.gl/tvFdq2xJe6Cyvwqp6" target="_blank" rel="noopener">odpri na zemljevidu</a></p><p>Hrano in pijačo (radenska, voda, sok, jabolčnik, odprta vina) skupinsko naroči organizator Murko. Skupni račun na koncu razdelimo enakomerno na vse udeležence. Kar si kdo naroči dodatno, plača sam.</p></div></div>
+      <div class="item"><div class="time">noč</div><div><b>Prenočevanje v avtodomih na parkirišču gostilne</b></div></div>
+    </div>
+
+    <div class="day">
+      <h3>Nedelja <small>29. 11. 2026</small></h3>
+      <div class="item"><div class="time">ves dan</div><div><b>Prosto</b><p>Vsak po svoje domov ali na izlet.</p></div></div>
+    </div>
+
+    <div class="note">
+      <b>Za ogled jame vedite:</b>
+      <ul>
+        <li>Prehodi se približno 3 km in 500 do 900 stopnic.</li>
+        <li>V jami je 12 °C, zato vzemite toplejša oblačila.</li>
+        <li>Prosimo za primerno obutev, v primeru dežja pa vzemite dežnik.</li>
+        <li>Upokojenci in študentje morate blagajniku pokazati izkaznico.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Stroški na osebo</h2>
+    <table>
+      <tr><th>Postavka</th><th style="text-align:right">Cena</th></tr>
+      <tr><td>Komedija (petek)</td><td class="num">10,00 €</td></tr>
+      <tr><td>Prostor krajevne skupnosti, fešta (petek)</td><td class="num">10,00 €</td></tr>
+      <tr><td>Škocjanske jame: odrasli</td><td class="num">16,00 €</td></tr>
+      <tr><td>Škocjanske jame: upokojenci in študentje</td><td class="num">12,00 €</td></tr>
+      <tr><td>Skupna večerja, Gostilna Hrvatin (račun razdelimo na vse osebe)</td><td class="num">obračun na koncu</td></tr>
+      <tr><td>Dodatna naročila v gostilni</td><td class="num">plača vsak sam</td></tr>
+    </table>
+    <p class="help">Prispevke pobere blagajnik v petek ob 18:00 pred kulturnim domom.</p>
+  </div>
+</section>
+
+<section id="prijava" style="padding-top:0">
+  <div class="wrap">
+    <h2>Prijava</h2>
+    <p><b>Rok za prijavo: petek, 20. 11. 2026</b></p>
+    <div class="formbox">
+      <form id="form" novalidate>
+        <input type="hidden" name="_subject" value="Nova prijava: Prednovoletni vikend Primorski Konvoj">
+        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
+
+        <div class="grid">
+          <div class="full"><label for="ime">Ime in priimek <span class="req">*</span></label><input type="text" id="ime" name="Ime in priimek" required></div>
+          <div><label for="tel">Telefon <span class="req">*</span></label><input type="tel" id="tel" name="Telefon" required></div>
+          <div><label for="email">E-mail</label><input type="email" id="email" name="email"></div>
+
+          <div><label for="odrasli">Število odraslih <span class="req">*</span></label><input type="number" id="odrasli" name="Odrasli" min="0" max="20" value="2"></div>
+          <div><label for="upok">Število upokojencev / študentov</label><input type="number" id="upok" name="Upokojenci in študentje" min="0" max="20" value="0"><div class="help">Nižja cena velja samo za ogled jame.</div></div>
+
+          <div class="full"><label for="kamper">Vozilo (kamper, registrska številka)</label><input type="text" id="kamper" name="Vozilo" placeholder="npr. Adria Coral, KP AB-123"></div>
+
+          <fieldset class="full">
+            <legend>Kaj se udeležite?</legend>
+            <div class="checks">
+              <label><input type="checkbox" name="Komedija" value="DA" data-price="10" checked> Petek: komedija (10 €/os.)</label>
+              <label><input type="checkbox" name="Fešta" value="DA" data-price="10" checked> Petek: fešta v prostorih KS (10 €/os.)</label>
+              <label><input type="checkbox" name="Škocjanske jame" value="DA" id="jama" checked> Sobota: ogled Škocjanskih jam (16 € / 12 €)</label>
+              <label><input type="checkbox" name="Gostilna Hrvatin" value="DA" checked> Sobota: skupna večerja v Gostilni Hrvatin</label>
+              <label><input type="checkbox" name="Prenočevanje petek (Vreme)" value="DA" checked> Petek: prenočim v avtodomu pred kulturnim domom</label>
+              <label><input type="checkbox" name="Prenočevanje sobota (Hrvatin)" value="DA" checked> Sobota: prenočim v avtodomu na parkirišču gostilne</label>
+            </div>
+          </fieldset>
+
+          <div class="full"><label for="prinesem">Kaj prinesete na fešto? (pijača, jed …)</label><input type="text" id="prinesem" name="Prinesem na fešto" placeholder="npr. domači pršut in steklenica terana"></div>
+
+          <div class="full"><label for="opombe">Opombe</label><textarea id="opombe" name="Opombe" rows="3" placeholder="Pozen prihod, posebne želje …"></textarea></div>
+        </div>
+
+        <div class="total">
+          <div>Okvirni znesek za blagajnika<small>komedija + fešta + jama · večerja se obračuna na koncu</small></div>
+          <strong id="sum">0,00 €</strong>
+        </div>
+        <input type="hidden" name="Znesek za blagajnika" id="sumField">
+
+        <button class="btn" type="submit" id="submit">Pošlji prijavo</button>
+        <div id="msg" class="msg" role="status"></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  Primorski Konvoj · prednovoletni vikend 2026<br>
+  Če vam kaj ni jasno, pokličite Damijana: <a href="tel:+38641698267" style="color:#ff5a4f">041 698 267</a>
+</footer>
+
+<script>
+  // === NASTAVITEV: sem prilepi svoj Formspree naslov (https://formspree.io/f/xxxxxxx) ===
+  const FORMSPREE_URL = "https://formspree.io/f/mwllglvn";
+
+  const f = document.getElementById('form');
+  const fmt = n => n.toFixed(2).replace('.', ',') + ' €';
+
+  function calc(){
+    const a = Math.max(0, parseInt(f.odrasli.value) || 0);
+    const u = Math.max(0, parseInt(f.upok.value) || 0);
+    let per = 0;
+    f.querySelectorAll('input[data-price]').forEach(c => { if (c.checked) per += +c.dataset.price; });
+    let total = (a + u) * per;
+    if (document.getElementById('jama').checked) total += a * 16 + u * 12;
+    document.getElementById('sum').textContent = fmt(total);
+    document.getElementById('sumField').value = fmt(total);
+  }
+  f.addEventListener('input', calc);
+  calc();
+
+  f.addEventListener('submit', async e => {
+    e.preventDefault();
+    const msg = document.getElementById('msg'), btn = document.getElementById('submit');
+    msg.className = 'msg';
+    const a = parseInt(f.odrasli.value) || 0, u = parseInt(f.upok.value) || 0;
+    if (!f.ime.value.trim() || !f.tel.value.trim() || a + u < 1) {
+      msg.className = 'msg err';
+      msg.textContent = 'Prosimo, vpišite ime, telefon in vsaj eno osebo.';
+      return;
+    }
+    if (FORMSPREE_URL.includes('VSTAVI')) {
+      msg.className = 'msg err';
+      msg.textContent = 'Obrazec še ni povezan (manjka Formspree naslov).';
+      return;
+    }
+    btn.disabled = true; btn.textContent = 'Pošiljam …';
+    try {
+      const r = await fetch(FORMSPREE_URL, { method: 'POST', body: new FormData(f), headers: { 'Accept': 'application/json' } });
+      if (!r.ok) throw new Error();
+      f.reset(); calc();
+      msg.className = 'msg ok';
+      msg.innerHTML = '<b>Hvala, prijava je oddana!</b> Se vidimo v petek 27. 11. ob 18:00 pred kulturnim domom.';
+    } catch {
+      msg.className = 'msg err';
+      msg.textContent = 'Pošiljanje ni uspelo. Poskusite znova ali pokličite organizatorja.';
+    } finally {
+      btn.disabled = false; btn.textContent = 'Pošlji prijavo';
+    }
+  });
+</script>
+</body>
+</html>
